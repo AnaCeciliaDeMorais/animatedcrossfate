@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 17, 72, 221)),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Comparador Antes e Depois'),
     );
   }
 }
@@ -61,31 +61,53 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        AnimatedCrossFade(
-          duration: const Duration(milliseconds: 800),
-          sizeCurve: Curves.easeInOut,
-          firstChild: const Text(
-            'Antes',
-            style: TextStyle(fontSize: 24, color: Colors.blue),
-          ),
-          secondChild: const Text(
-            'Depois',
-            style: TextStyle(fontSize: 24, color: Colors.green),
-          ),
-          crossFadeState: _showSecond
-              ? CrossFadeState.showSecond
-              : CrossFadeState.showFirst,
+Widget build(BuildContext context) {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      AnimatedCrossFade(
+        duration: const Duration(milliseconds: 800),
+        sizeCurve: Curves.easeInOut,
+        firstChild: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/bateria.png',
+              width: 100,
+              height: 100,
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Antes',
+              style: TextStyle(fontSize: 24, color: Colors.blue),
+            ),
+          ],
         ),
-        const SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: _toggleCrossFade,
-          child: const Text('Alternar'),
+        secondChild: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/bateria1.png',
+              width: 100,
+              height: 100,
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Depois',
+              style: TextStyle(fontSize: 24, color: Colors.green),
+            ),
+          ],
         ),
-      ],
-    );
-  }
+        crossFadeState: _showSecond
+            ? CrossFadeState.showSecond
+            : CrossFadeState.showFirst,
+      ),
+      const SizedBox(height: 20),
+      ElevatedButton(
+        onPressed: _toggleCrossFade,
+        child: const Text('Alternar'),
+      ),
+    ],
+  );
+}
 }
