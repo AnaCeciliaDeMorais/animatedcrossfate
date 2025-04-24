@@ -1,16 +1,24 @@
-# animatedcrossfate
+<h1 align="center">🖼️ Comparador Antes/Depois com AnimatedCrossFade</h1>
+<img alt="Status" src="https://img.shields.io/badge/Status-Concluido-blue">
 
-A new Flutter project.
+Este projeto demonstra a criação de um **comparador de imagens "antes e depois"** usando Flutter e o widget `AnimatedCrossFade`. A ideia é alternar suavemente entre duas imagens de um produto com animação, permitindo ao usuário visualizar a diferença de forma agradável.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Funcionalidades
 
-A few resources to get you started if this is your first Flutter project:
+- Alterna entre duas imagens (antes e depois).
+- Animação suave com `AnimatedCrossFade`.
+- Botão para alternar entre os estados.
+- Imagens declaradas corretamente no `pubspec.yaml`.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tecnologias Utilizadas
+
+- Flutter
+- Dart
+- `AnimatedCrossFade`
+- `StatefulWidget`
+
+---
